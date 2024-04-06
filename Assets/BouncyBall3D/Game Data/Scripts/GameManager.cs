@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using YG;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -28,6 +29,16 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] Image[] stars = new Image[3];
     [SerializeField] Color activeStars, inactiveStars;
 
+    private void OnEnable()
+    {
+        YandexGame.RewardVideoEvent += ReviveSucceed;
+    }
+
+    private void OnDisable()
+    {
+        YandexGame.RewardVideoEvent -= ReviveSucceed;
+    }
+
     protected override void Awake()
     {
         base.Awake();
@@ -35,11 +46,11 @@ public class GameManager : Singleton<GameManager>
         player = FindObjectOfType<Player>();
         bestScore = PlayerPrefs.GetInt("bestScore", 0);
 
-        if (ServicesManager.instance != null)
+        /*if (ServicesManager.instance != null)
         {
             ServicesManager.instance.InitializeAdmob();
             ServicesManager.instance.InitializeUnityAds();
-        }
+        }*/
     }
 
     private void Start()
@@ -51,11 +62,11 @@ public class GameManager : Singleton<GameManager>
 
     public void PlayerFailed()
     {
-        if (ServicesManager.instance != null)
+        /*if (ServicesManager.instance != null)
         {
             ServicesManager.instance.ShowInterstitialAdmob();
             ServicesManager.instance.ShowInterstitialUnityAds();
-        }
+        }*/
         gameState = GameState.Lost;
         SoundManager.Instance.StopTrack();
         revivePanel.SetActive(true);
@@ -91,16 +102,27 @@ public class GameManager : Singleton<GameManager>
 
     public void Revive()
     {
-        if (ServicesManager.instance != null)
+        /*if (ServicesManager.instance != null)
         {
             ServicesManager.instance.ShowRewardedVideoAdAdmob();
             ServicesManager.instance.ShowRewardedVideoUnityAds();
-        }
+        }*/
+        YandexGame.Instance._RewardedShow(0);
     }
 
-    public void ReviveSucceed(bool completed)
+    /*public void ReviveSucceed(bool completed)
     {
         if (completed)
+        {
+            player.Revive();
+            revivePanel.SetActive(false);
+            playButton.SetActive(true);
+        }
+    }*/
+
+    void ReviveSucceed(int id)
+    {
+        if (id == 0)
         {
             player.Revive();
             revivePanel.SetActive(false);
@@ -152,12 +174,12 @@ public class GameManager : Singleton<GameManager>
     public void NoThanks()
     {
         reviveAnim.SetTrigger("No");
-        
-        if (ServicesManager.instance != null)
+        YandexGame.FullscreenShow();
+        /*if (ServicesManager.instance != null)
         {
             ServicesManager.instance.ShowInterstitialAdmob();
             ServicesManager.instance.ShowInterstitialUnityAds();
-        }
+        }*/
     }
 
     public void Menu()

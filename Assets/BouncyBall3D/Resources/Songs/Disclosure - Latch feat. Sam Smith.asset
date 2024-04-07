@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7235c0eb099ea6e42b5788be679eb56f, type: 3}
   m_Name: Disclosure - Latch feat. Sam Smith
   m_EditorClassIdentifier: 
-  song: {fileID: 8300000, guid: 1e848947348c3ef4c9cdcbff0f1c4098, type: 3}
+  song: {fileID: 8300000, guid: 8e7deab628f5c414d86c9bbc22b0e964, type: 3}
   BPM: 126
   stars: 1
   difficulty: 3

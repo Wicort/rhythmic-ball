@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7235c0eb099ea6e42b5788be679eb56f, type: 3}
   m_Name: Daughter - Get Lucky
   m_EditorClassIdentifier: 
-  song: {fileID: 8300000, guid: b3978660383c7a744b9cf4613f3403bf, type: 3}
+  song: {fileID: 8300000, guid: 1e07e88fe0237c24095d5029e766a26f, type: 3}
   BPM: 103
   stars: 0
   difficulty: 2

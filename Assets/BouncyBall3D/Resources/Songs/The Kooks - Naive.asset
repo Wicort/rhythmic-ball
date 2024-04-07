@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7235c0eb099ea6e42b5788be679eb56f, type: 3}
   m_Name: The Kooks - Naive
   m_EditorClassIdentifier: 
-  song: {fileID: 8300000, guid: 200fc83e09c1d434eb6e0eaa1014b115, type: 3}
+  song: {fileID: 8300000, guid: 6a622429d7341e942adb6f91eb3c5587, type: 3}
   BPM: 120
   stars: 0
   difficulty: 3

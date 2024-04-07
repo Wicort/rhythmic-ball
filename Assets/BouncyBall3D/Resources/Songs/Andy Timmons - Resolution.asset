@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: eb01fd7ae3e5dcf49b36ba1a83518b9e, type: 3}
   BPM: 82
-  stars: 0
+  stars: 3
   difficulty: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7235c0eb099ea6e42b5788be679eb56f, type: 3}
   m_Name: Clean Bandit - Dust Clears
   m_EditorClassIdentifier: 
-  song: {fileID: 8300000, guid: 72b0dd4d1b1c49c44806466a6c5907e3, type: 3}
+  song: {fileID: 8300000, guid: c1c381d4335f6754daa3c138c2f5f495, type: 3}
   BPM: 123
   stars: 0
   difficulty: 3

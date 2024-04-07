@@ -156,10 +156,12 @@ public class GameManager : Singleton<GameManager>
 
     public void AddScore(bool perfect)
     {
+        int mod = LevelGenerator.Instance.currentSong.difficulty - 1;
+
         if (perfect)
-            score += 10;
+            score += 10 + 2 * mod;
         else
-            score += 5;
+            score += 5 + mod;
 
         scoreText.text = score.ToString();
         scoreAnim.SetTrigger("Up");

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7235c0eb099ea6e42b5788be679eb56f, type: 3}
   m_Name: Smallpools - Dreaming
   m_EditorClassIdentifier: 
-  song: {fileID: 8300000, guid: f231c90e72f0b904fba5b35d6b821eda, type: 3}
+  song: {fileID: 8300000, guid: 8be036bf445d44846836541646264a71, type: 3}
   BPM: 128
   stars: 0
   difficulty: 3

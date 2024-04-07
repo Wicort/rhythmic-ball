@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7235c0eb099ea6e42b5788be679eb56f, type: 3}
   m_Name: DJ Snake, AlunaGeorge - You Know You Like It
   m_EditorClassIdentifier: 
-  song: {fileID: 8300000, guid: 2829347b36fa4b642990cced92c289c2, type: 3}
-  BPM: 98
-  stars: 0
-  difficulty: 2
+  song: {fileID: 8300000, guid: 13a5f45ba31bfe24fa6fc85f4f9371be, type: 3}
+  BPM: 196
+  stars: 1
+  difficulty: 5

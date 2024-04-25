@@ -81,6 +81,7 @@ public class GameManager : Singleton<GameManager>
         if (score > bestScore)
         {
             PlayerPrefs.SetInt("bestScore", score);
+            YandexGame.NewLeaderboardScores("TopScore", score);
         }
         ShowLevelProgress();
 
